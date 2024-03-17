@@ -1,0 +1,72 @@
+.main-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('../images/background2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    /* Điều chỉnh giá trị theo ý muốn */
+}
+
+ul {
+    list-style-type: none;
+}
+
+.layout-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgb(22, 22, 22);
+    border-radius: 10px;
+}
+
+.dashboard-container {
+    background-color: rgb(245, 245, 245);
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    flex: 1;
+    border-radius: 10px;
+    border-right: 1px solid rgba(27, 28, 28, 0.5);
+    box-shadow: 1px 4px 5px rgb(13, 12, 12);
+    margin-right: 5px;
+    /* Điều chỉnh giá trị theo ý muốn */
+    /* Điều chỉnh giá trị theo ý muốn */
+}
+
+
+.home-container {
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    background: rgb(245, 245, 245);
+    flex: 4;
+    border-radius: 10px;
+    height: 550px;
+}
+
+@media only screen and (max-width: 740px) {
+
+    /* CSS cho màn hình nhỏ */
+    .dashboard-container {
+        left: -100%;
+        position: fixed;
+        width: 35vw;
+        height: 550px;
+        transition: left 0.8s ease-in-out;
+        z-index: 9999;
+        /* Tốc độ và kiểu chuyển đổi */
+
+    }
+
+    .dashboard-container.show {
+        left: 0;
+        /* Đưa thanh bar vào vị trí hiển thị từ trái qua phải */
+    }
+
+    .layout-container {
+        width: 98%;
+    }
+
+}
